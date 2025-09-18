@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>อาหารไทย</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #fffdf7;
+      color: #333;
+    }
+    header {
+      background: #e53935;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .food-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .food-card:hover {
+      transform: translateY(-5px);
+    }
+    .food-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .food-card .info {
+      padding: 1rem;
+    }
+    .food-card h2 {
+      margin-top: 0;
+      color: #e53935;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>อาหารไทย</h1>
+    <nav>
+      <a href="index.html">กลับหน้าหลัก</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="food-card">
+      <img src="https://www.unileverfoodsolutions.co.th/dam/global-ufs/mcos/SEA/calcmenu/recipes/TH-recipes/fish-&-other-seafood-dishes/savoury-tom-yum-goong/main-header.jpg" alt="ต้มยำกุ้ง">
+      <div class="info">
+        <h2>ต้มยำกุ้ง</h2>
+        <p>ต้มยำกุ้งรสจัดจ้านด้วยสมุนไพรไทย เช่น ตะไคร้ ใบมะกรูด และพริกขี้หนู เป็นซุปเผ็ดเปรี้ยวที่ขึ้นชื่อระดับโลก</p>
+      </div>
+    </div>
+
+    <div class="food-card">
+      <img src="https://www.chuahahseng.com/wp-content/uploads/2022/11/MG_3614-683x1024.jpg" alt="ผัดไทย">
+      <div class="info">
+        <h2>ผัดไทย</h2>
+        <p>เมนูเส้นผัดไทยๆ ที่ผสมผสานรสชาติเปรี้ยว หวาน เค็ม โดยมีถั่วงอก กุ้งแห้ง และถั่วลิสงบดเพิ่มความอร่อย</p>
+      </div>
+    </div>
+
+    <div class="food-card">
+      <img src="https://www.unileverfoodsolutions.co.th/th/chef-inspiration/simple-tips-for-great-flavour/somtum-green-papaya-salad-recipes/jcr:content/parsys/content-aside-footer/tipsandadvice/image.img.jpg/1695118621402.jpg" alt="ส้มตำ">
+      <div class="info">
+        <h2>ส้มตำ</h2>
+        <p>อาหารอีสานยอดนิยม ทำจากมะละกอดิบตำคลุกเคล้ากับพริก มะนาว น้ำปลา และถั่วลิสง กินคู่กับไก่ย่างและข้าวเหนียว</p>
+      </div>
+    </div>
+
+    <div class="food-card">
+      <img src="https://recipe.ajinomoto.co.th/_next/image?url=https%3A%2F%2Fwww.ajinomoto.co.th%2Fstorage%2Fphotos%2Fshares%2FRecipe%2FMenu%2F3-19Greencurry%2F61a8f392ef73e.jpeg&w=1920&q=75" alt="แกงเขียวหวาน">
+      <div class="info">
+        <h2>แกงเขียวหวาน</h2>
+        <p>แกงเขียวหวานรสเข้มข้น หอมเครื่องแกงและกะทิ ใส่ไก่ ลูกชิ้น หรือหมู กินคู่กับข้าวสวยหรือขนมจีน</p>
+      </div>
+    </div>
+
+    <div class="food-card">
+      <img src="https://happychoicefoods.com/wp-content/uploads/2024/07/HPC_blog7jul_cover-1024x538.jpg" alt="ข้าวเหนียวหมูปิ้ง">
+      <div class="info">
+        <h2>ข้าวเหนียวหมูปิ้ง</h2>
+        <p>หนึ่งในเมนูยอดนิยมของคนไทยที่มักจะพบเห็นตามตลาดหรือร้านขายอาหารเช้าคือ “หมูปิ้ง” ที่ส่งกลิ่นหอมน่ากินเป็นที่สุด ไม่เพียงแต่สะดวกและรวดเร็ว แต่ยังมีประโยชน์</p>
+      </div>
+    </div>
+
+    <div class="food-card">
+      <img src="https://www.ofm.co.th/blog/wp-content/uploads/2025/03/mango-sticky-rice-recipes-summer-ideas_1200x630.png" alt="ข้าวเหนียวมะม่วง">
+      <div class="info">
+        <h2>ข้าวเหนียวมะม่วง</h2>
+        <p>ของหวานไทยยอดนิยม ข้าวเหนียวราดกะทิหวานมัน กินคู่กับมะม่วงสุกหวานฉ่ำ</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>นำเสนอโดย Suphitcha</p>
+  </footer>
+</body>
+</html>
