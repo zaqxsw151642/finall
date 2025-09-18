@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>เที่ยวสั้นๆ — สถานที่แนะนำ</title>
+  <style>
+    :root{
+      --accent:#6b46c1;
+      --muted:#6b7280;
+      --card-bg:#fff;
+      --page-bg:#f6f7fb;
+      --glass: rgba(255,255,255,0.6);
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,'Noto Sans Thai',sans-serif;background:linear-gradient(180deg,#f6f7fb, #ffffff);color:#111;min-height:100vh;display:flex;flex-direction:column}
+
+    header{display:flex;align-items:center;justify-content:space-between;padding:20px 40px;background:white;box-shadow:0 2px 8px rgba(0,0,0,0.05)}
+    .leftHeader{display:flex;align-items:center;gap:16px}
+    .logo{width:64px;height:64px;border-radius:12px;background:var(--accent);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:20px}
+    h1{margin:0;font-size:24px}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+
+    nav a{margin-left:20px;text-decoration:none;color:var(--accent);font-weight:600;font-size:16px}
+
+    main{flex:1;display:flex;flex-direction:column;padding:40px}
+    .grid{flex:1;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
+    .card{background:var(--card-bg);border-radius:12px;box-shadow:0 6px 18px rgba(20,20,40,0.06);overflow:hidden;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease;display:flex;flex-direction:column}
+    .card:hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(20,20,40,0.08)}
+    .card .thumb{flex:0 0 220px;background-size:cover;background-position:center}
+    .card .body{padding:16px;flex:1;display:flex;flex-direction:column}
+    .card h3{margin:0 0 8px;font-size:18px}
+    .card p{margin:0;color:var(--muted);font-size:15px;flex:1}
+    .tags{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
+    .tag{font-size:12px;padding:6px 10px;border-radius:999px;background:var(--glass);border:1px solid rgba(107,70,193,0.08)}
+
+    footer{padding:16px;background:#fff;color:var(--muted);font-size:14px;text-align:center;box-shadow:0 -2px 6px rgba(0,0,0,0.05)}
+
+    .modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;padding:20px;visibility:hidden;opacity:0;transition:opacity .18s ease;z-index:60;background:rgba(0,0,0,0.5)}
+    .modal.open{visibility:visible;opacity:1}
+    .modal .panel{width:100%;max-width:900px;border-radius:12px;background:#fff;box-shadow:0 30px 80px rgba(14,14,30,0.2);overflow:hidden;position:relative;display:flex;flex-direction:column}
+    .panel .hero{height:400px;background-size:cover;background-position:center}
+    .panel .content{padding:24px}
+    .meta{color:var(--muted);font-size:14px;margin-bottom:12px}
+    .close{position:absolute;right:16px;top:16px;background:rgba(0,0,0,0.06);border-radius:8px;padding:6px;cursor:pointer}
+    .btn{display:inline-block;padding:10px 16px;border-radius:8px;background:var(--accent);color:white;text-decoration:none;font-weight:600;margin-top:12px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="leftHeader">
+      <div class="logo">ทริป</div>
+      <div>
+        <h1>การท่องเที่ยว — สถานที่แนะนำ</h1>
+        <p class="lead">รวมสถานที่ท่องเที่ยวน่าสนใจ เหมาะกับทริปวันหยุดสั้นๆ</p>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">กลับหน้าหลัก</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="grid">
+      <article class="card" data-index="0">
+        <div class="thumb" style="background-image:url('https://mpics.mgronline.com/pics/Images/564000010482201.JPEG')"></div>
+        <div class="body">
+          <h3>อุทยานแห่งชาติเขาใหญ่</h3>
+          <p>น้ำตก เขตรักษาพันธุ์สัตว์ป่า เหมาะสำหรับการเดินป่าและชมวิว</p>
+          <p>อุทยานแห่งชาติเขาใหญ่เป็นอุทยานแห่งแรกของประเทศไทย ที่มีความสำคัญทั้งในระดับโลก และภูมิภาค ด้วยสภาพพื้นที่เป็นเขาสูงที่เป็นขอบของที่ราบสูงอีสาน ทำให้อุทยานเป็นแนวดักน้ำฝน ก่อเกิดเป็นแหล่งต้นน้ำลำธารหลายสาย ที่กำเนิดความหลากหลายของพันธุ์พืช และสัตว์ป่า อุทยานจึงเปรียบเหมือนบ้าน และโรงเรียนให้นักท่องเที่ยวได้เข้ามาพัก และเรียนรู้ที่จะรักษ์ และหวงแหนทรัพยากรธรรมชาติ เพื่อช่วยกันปกป้อง “บ้าน” ของพวกเราทุกคน </p>
+          <div class="tags"><span class="tag">ธรรมชาติ</span><span class="tag">กางเต็นท์</span></div>
+        </div>
+      </article>
+      <article class="card" data-index="1">
+        <div class="thumb" style="background-image:url('https://www.paiduaykan.com/wp-content/uploads/2020/04/1-bangnoi32.jpg')"></div>
+        <div class="body">
+          <h3>ชุมชนริมน้ำบางน้อย</h3>
+          <p>ชิมอาหารพื้นบ้าน ล่องเรือชมวิถีชีวิตท้องถิ่น</p>
+          <p>ตลาดน้ำคลองบางน้อย  ตั้งอยู่ที่่ปากคลองบางน้อย หน้าวัดเกาะแก้ว ตำบลกระดังงา อำเภอบางคนที อยู่ห่างจากอุทยาน ร.2 อำเภออัมพวาประมาณ 5 กิโลเมตร ชุมชนปากคลองบางน้อยหรือบางน้อยนอก เคยเป็นย่านการค้าทางน้ำที่สำคัญมากแห่งหนึ่งในลุ่มน้ำแม่กลอง นักท่องเที่ยวสามารถเดินเลียบคลองชมบรรยากาศบ้านไม้เก่าแก่ริมคลองบางน้อย เลือกชื้อผลิตภัณฑ์ชุมชน ทั้งผลผลิตทางการเกษตรจากชาวสวน รวมทั้งอาหารคาวหวาน ตลาดน้ำคลองบางน้อยมีประจำทุกวันเสาร์ และ วันอาทิตย์ ตั้งแต่เวลาประมาณ 09.00 น. – 1500 น. </p>
+          <div class="tags"><span class="tag">วัฒนธรรม</span><span class="tag">ของกิน</span></div>
+        </div>
+      </article>
+      <article class="card" data-index="2">
+        <div class="thumb" style="background-image:url('https://bannkalasee.com/wp-content/uploads/2019/08/%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%97%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B9%81%E0%B8%81%E0%B9%89%E0%B8%A7-%E0%B8%AA%E0%B8%B1%E0%B8%95%E0%B8%AB%E0%B8%B5%E0%B8%9A-2-768x432.jpg')"></div>
+        <div class="body">
+          <h3>หาดทรายแก้ว</h3>
+          <p>ชายหาดสวย น้ำใส เหมาะสำหรับเล่นน้ำและถ่ายรูป
+          </p>
+          <p>.“หาดทรายแก้ว” ตั้งอยู่ในเขตพื้นที่โรงเรียนชุมพลทหารเรือ กรมยุทธศึกษาทหารเรือ พลเรือเอกทวีศักดิ์  โสมาภา ผู้บัญชาการทหารเรือ (ในขณะนั้น) ได้สนับสนุนการท่องเที่ยว จึงได้สั่งการให้ โรงเรียนชุมพลทหารเรือ ดำเนินการสำรวจและพัฒนาพื้นที่นี้ เพื่อจัดเป็นสถานที่พักผ่อนของกำลังพลของกองทัพเรือ และบุคคลภายนอก โดยมีแนวทางการท่องเที่ยวที่เน้นในเชิงอนุรักษ์ธรรมชาติ
+
+.......“หาดทรายแก้ว” มีความยาวของหาดประมาณ 1,700 เมตร เป็นหาดทรายสีขาว เม็ดทรายสวยงาม นำทะเลใสสะอาด ภูมิประเทศโดยรอบจะประกอบไปด้วยป่าละเมาะที่สมบูรณ์ ท้องทะเลเป็นทรายปนปะการัง เหมาะอย่างยิ่งกับการพักผ่อนหย่อนใจ ดำน้ำ กิจกรรมหรือกีฬาชายหาด สามารถเข้ามาพักผ่อนได้ตลอดทั้งปี (ข้อมูลเพิ่มเติม www.nrs.ac.th)
+
+ทั้งนี้ สอบถามรายละเอียดเพิ่มเติมได้ที่ หาดทรายแก้ว โทรศัพท์ 0 3843 6187 ต่อ 2070, 2607, ศูนย์ประสานงานการท่องเที่ยวกองทัพเรือในพื้นที่สัตหีบ โทรศัพท์ 0 3843 7112 หรือ 75096, 74673 (ทร.) ในวันและเวลาราชการเท่านั้น</p>
+          <div class="tags"><span class="tag">ทะเล</span><span class="tag">ถ่ายรูป</span></div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer>ออกแบบโดย - Suphitcha</footer>
+
+  <div class="modal" id="modal">
+    <div class="panel">
+      <div class="hero" id="modalHero"></div>
+      <div class="content">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <h2 id="modalTitle">สถานที่</h2>
+            <div class="meta" id="modalMeta">รายละเอียดโดยย่อ</div>
+          </div>
+          <div class="close" id="modalClose">✕</div>
+        </div>
+        <p id="modalDesc">รายละเอียดสถานที่</p>
+        <a id="moreBtn" class="btn" href="#" target="_blank">ดูเพิ่มเติม</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const places = [
+      {
+        title:'อุทยานแห่งชาติเขาใหญ่',
+        hero:'https://mpics.mgronline.com/pics/Images/564000010482201.JPEG',
+        meta:'ธรรมชาติ • เดินป่า • เวลาแนะนำ: 1-2 วัน',
+        desc:'อุทยานแห่งชาติยอดนิยม มีเส้นทางเดินป่า น้ำตก และจุดชมวิว',
+        url:'https://www.google.com/maps'
+      },
+      {
+        title:'ชุมชนริมน้ำบางน้อย',
+        hero:'https://www.paiduaykan.com/wp-content/uploads/2020/04/1-bangnoi32.jpg',
+        meta:'วัฒนธรรม • อาหารท้องถิ่น • เวลาแนะนำ: ครึ่งวัน-1 วัน',
+        desc:'ชุมชนเก่าแก่ริมแม่น้ำ มีตลาดน้ำและร้านอาหารพื้นบ้าน',
+        url:'https://www.google.com/maps'
+      },
+      {
+        title:'หาดทรายแก้ว',
+        hero:'https://bannkalasee.com/wp-content/uploads/2019/08/%E0%B8%AB%E0%B8%B2%E0%B8%94%E0%B8%97%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B9%81%E0%B8%81%E0%B9%89%E0%B8%A7-%E0%B8%AA%E0%B8%B1%E0%B8%95%E0%B8%AB%E0%B8%B5%E0%B8%9A-2-768x432.jpg',
+        meta:'ทะเล • เล่นน้ำ • เวลาแนะนำ: ครึ่งวัน-1 วัน',
+        desc:'ชายหาดเรียงยาวน้ำใส ทรายเนียน เหมาะสำหรับพักผ่อน',
+        url:'https://www.google.com/maps'
+      }
+    ];
+
+    const modal=document.getElementById('modal');
+    const modalHero=document.getElementById('modalHero');
+    const modalTitle=document.getElementById('modalTitle');
+    const modalMeta=document.getElementById('modalMeta');
+    const modalDesc=document.getElementById('modalDesc');
+    const moreBtn=document.getElementById('moreBtn');
+    const closeBtn=document.getElementById('modalClose');
+
+    document.querySelectorAll('.card').forEach(card=>{
+      card.addEventListener('click',()=>{
+        const idx=Number(card.dataset.index);
+        const p=places[idx];
+        modalHero.style.backgroundImage=`url('${p.hero}')`;
+        modalTitle.textContent=p.title;
+        modalMeta.textContent=p.meta;
+        modalDesc.textContent=p.desc;
+        moreBtn.href=p.url;
+        modal.classList.add('open');
+      });
+    });
+
+    function closeModal(){modal.classList.remove('open');}
+    closeBtn.addEventListener('click',closeModal);
+    modal.addEventListener('click',e=>{if(e.target===modal) closeModal();});
+    window.addEventListener('keydown',e=>{if(e.key==='Escape') closeModal();});
+  </script>
+</body>
+</html>
