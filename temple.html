@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>วัดสำคัญในประเทศไทย</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: #fefcf6;
+      color: #333;
+    }
+    header {
+      background: #4a148c;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .temple-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+    .temple-card:hover {
+      transform: translateY(-5px);
+    }
+    .temple-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+    .temple-card .info {
+      padding: 1rem;
+    }
+    .temple-card h2 {
+      margin-top: 0;
+      color: #4a148c;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>วัดสำคัญในประเทศไทย</h1>
+    <nav>
+      <a href="index.html">กลับหน้าหลัก</a>
+      
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="temple-card">
+      <img src="https://img.thaicdn.net/u/2023/sutasinee/04/WatPhraKaew11.jpg" alt="วัดพระแก้ว">
+      <div class="info">
+        <h2>วัดพระศรีรัตนศาสดาราม (วัดพระแก้ว)</h2>
+        <p>ตั้งอยู่ในพระบรมมหาราชวัง กรุงเทพฯ เป็นวัดคู่บ้านคู่เมือง ประดิษฐานพระแก้วมรกต พระคู่บ้านคู่เมืองของไทย</p>
+      </div>
+    </div>
+
+    <div class="temple-card">
+      <img src="https://static.wixstatic.com/media/2cc94a_07e55de318fe41538e17cb9de596cb45~mv2.jpg/v1/fill/w_980,h_544,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/shutterstock_2183013411.jpg" alt="วัดอรุณราชวราราม">
+      <div class="info">
+        <h2>วัดอรุณราชวราราม</h2>
+        <p>วัดอรุณฯ หรือวัดแจ้ง ริมแม่น้ำเจ้าพระยา โดดเด่นด้วยพระปรางค์สูงใหญ่ งดงามทั้งกลางวันและกลางคืน</p>
+      </div>
+    </div>
+
+    <div class="temple-card">
+      <img src="https://trueleasing.co.th/catalog/wheretogo_image/iStock-1053121902-re_3.jpg" alt="วัดโพธิ์">
+      <div class="info">
+        <h2>วัดโพธิ์ (วัดพระเชตุพนวิมลมังคลาราม)</h2>
+        <p>เป็นที่ประดิษฐานพระพุทธไสยาสน์องค์ใหญ่ และเป็นศูนย์กลางการแพทย์แผนไทยที่ได้รับการขึ้นทะเบียนมรดกโลก</p>
+      </div>
+    </div>
+
+    <div class="temple-card">
+      <img src="https://www.silpa-mag.com/wp-content/uploads/2024/03/Cover-14-696x364.jpg" alt="วัดพระธาตุดอยสุเทพ">
+      <div class="info">
+        <h2>วัดพระธาตุดอยสุเทพ</h2>
+        <p>วัดคู่บ้านคู่เมืองเชียงใหม่ ตั้งอยู่บนดอยสุเทพ มีพระบรมธาตุเจดีย์ทองงดงาม มองเห็นวิวเมืองเชียงใหม่ได้ชัดเจน</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>จัดทำโดย - ภานุพงษ์</p>
+  </footer>
+</body>
+</html>
