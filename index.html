@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thailand Tourism - ท่องเที่ยวประเทศไทย</title>
+    <meta name="description" content="ค้นพบความงามของประเทศไทย - วัฒนธรรม ธรรมชาติ และความเป็นมิตรของคนไทย | Discover the beauty of Thailand - culture, nature, and Thai hospitality">
+    <meta name="author" content="Thailand Tourism">
+    
+    <meta property="og:title" content="Thailand Tourism - ท่องเที่ยวประเทศไทย">
+    <meta property="og:description" content="ค้นพบความงามของประเทศไทย - วัฒนธรรม ธรรมชาติ และความเป็นมิตรของคนไทย">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <h1>Thailand Tourism</h1>
+            </div>
+            
+            <nav class="nav">
+                <a href="#destinations">สถานที่ท่องเที่ยว</a>
+                <a href="#culture">วัฒนธรรม</a>
+                <a href="#food">อาหาร</a>
+                <button class="btn btn-primary">เริ่มวางแผน</button>
+            </nav>
+            
+            <div class="mobile-menu">
+                <button class="mobile-toggle" onclick="toggleMobileMenu()">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">
+                ค้นพบ
+                <span class="hero-highlight">ประเทศไทย</span>
+            </h1>
+            
+            <p class="hero-description">
+                สัมผัสความงามของวัฒนธรรม ธรรมชาติ และความเป็นมิตรของคนไทย
+                <br>
+                <span class="hero-subtitle">Experience the Beauty of Thai Culture, Nature, and Hospitality</span>
+            </p>
+            
+            <div class="hero-buttons">
+                <a href="#bangkok" class="btn btn-hero">เริ่มการผจญภัย</a>
+                <button class="btn btn-outline">ดูสถานที่ท่องเที่ยว</button>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinations" class="destinations">
+        <div class="container">
+            <div class="section-header">
+                <h2>สถานที่ท่องเที่ยวยอดนิยม</h2>
+                <p>Popular Destinations in Thailand</p>
+            </div>
+            
+            <div class="destinations-grid">
+                <div class="destination-card">
+                  <div class="destination-card" id="bangkok"></div>
+                    <div class="card-image" style="background-image: url('https://static.thairath.co.th/media/dFQROr7oWzulq5Fa4MDnIPhZPsqmRTyDeuiDAt6yLwmE0DanaG3wbxTKtKTMLCKfjEb.jpg');">
+                        <div class="card-overlay"></div>
+                        <div class="card-title">
+                            <h3>กรุงเทพมหานคร</h3>
+                            <p>Bangkok</p>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>เมืองหลวงที่คึกคักพร้อมวัด สวน และตลาดน้ำ</p>
+                        <div class="highlights">
+                            <p class="highlights-title">ไฮไลท์:</p>
+                            <ul>
+                                <li>วัดพระแก้ว</li>
+                                <li>ตลาดจตุจักร</li>
+                                <li>แม่น้ำเจ้าพระยา</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="destination-card">
+                     <div class="card-image" style="background-image: url('https://www.ananda.co.th/blog/thegenc/wp-content/uploads/2024/02/%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B8%A1%E0%B8%B5%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD-1145-x-550-px-17-1.png');">
+                        <div class="card-overlay"></div>
+                        <div class="card-title">
+                            <h3>เชียงใหม่</h3>
+                            <p>Chiang Mai</p>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>เมืองโบราณล้านนาและธรรมชาติที่สวยงาม</p>
+                        <div class="highlights">
+                            <p class="highlights-title">ไฮไลท์:</p>
+                            <ul>
+                                <li>วัดพระธาตุดอยสุเทพ</li>
+                                <li>ตลาดวอร์กกิ้งสตรีท</li>
+                                <li>ภูเขาดอยอินทนนท์</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="destination-card">
+                     <div class="card-image" style="background-image: url('https://res.klook.com/image/upload/fl_lossy.progressive,q_60/Mobile/City/p2pfj38lzjf7wsd6gobn.jpg');">
+                        <div class="card-overlay"></div>
+                        <div class="card-title">
+                            <h3>ภูเก็ต</h3>
+                            <p>Phuket</p>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>เกาะแห่งความฝันกับหาดทรายขาวและน้ำใส</p>
+                        <div class="highlights">
+                            <p class="highlights-title">ไฮไลท์:</p>
+                            <ul>
+                                <li>หาดป่าตอง</li>
+                                <li>วัดฉลอง</li>
+                                <li>อ่าวพังงา</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="destination-card">
+                     <div class="card-image" style="background-image: url('https://blog.bangkokair.com/wp-content/uploads/2023/09/01_krabi-travel-guide-top-destinations.jpg');">
+                        <div class="card-overlay"></div>
+                        <div class="card-title">
+                            <h3>กระบี่</h3>
+                            <p>Krabi</p>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>ธรรมชาติอันงดงามและหาดที่สวยที่สุด</p>
+                        <div class="highlights">
+                            <p class="highlights-title">ไฮไลท์:</p>
+                            <ul>
+                                <li>เกาะพีพี</li>
+                                <li>หาดไร่เลย์</li>
+                                <li>เกาะไก่</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Culture Section -->
+    <section id="culture" class="culture">
+        <div class="container">
+            <div class="section-header">
+                <h2>วัฒนธรรมไทย</h2>
+                <p class="culture-description">
+                    ดำดิ่งสู่ความงดงามของวัฒนธรรมไทยที่เก่าแก่และมีเอกลักษณ์
+                    <br>
+                    <span>Immerse yourself in the rich and unique Thai culture</span>
+                </p>
+            </div>
+            
+            <div class="culture-grid">
+                <div class="culture-card">
+                    <div class="culture-icon">🏛️</div>
+                    <h3>วัดและศาสนา</h3>
+                    <p class="culture-subtitle">Temples & Religion</p>
+                    <p>สัมผัสความศักดิ์สิทธิ์และสถาปัตยกรรมไทยโบราณ</p>
+                </div>
+                
+                <div class="culture-card">
+                    <div class="culture-icon">🍜</div>
+                    <h3>อาหารไทย</h3>
+                    <p class="culture-subtitle">Thai Cuisine</p>
+                    <p>ลิ้มลองรสชาติอันเป็นเอกลักษณ์ของอาหารไทยแท้</p>
+                </div>
+                
+                <div class="culture-card">
+                    <div class="culture-icon">💃</div>
+                    <h3>การแสดงไทย</h3>
+                    <p class="culture-subtitle">Traditional Arts</p>
+                    <p>ชื่นชมงานศิลปะและการแสดงพื้นบ้านไทย</p>
+                </div>
+                
+                <div class="culture-card">
+                    <div class="culture-icon">🎭</div>
+                    <h3>เทศกาลไทย</h3>
+                    <p class="culture-subtitle">Thai Festivals</p>
+                    <p>ร่วมสนุกกับเทศกาลและประเพณีไทยตลอดปี</p>
+                </div>
+            </div>
+            
+            <div class="culture-highlight">
+                <h3>สวัสดีจากประเทศไทย</h3>
+                <p>
+                    ประเทศไทยมีประวัติศาสตร์ยาวนานกว่า 700 ปี ด้วยวัฒนธรรมที่หลากหลาย ผสมผสานระหว่างความเป็นเอเชียตะวันออกเฉียงใต้ 
+                    พุทธศาสนา และความเป็นสมัยใหม่ ทำให้ประเทศไทยเป็นจุดหมายปลายทางที่น่าค้นหาอย่างแท้จริง
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon"></div>
+                        <h3>Thailand Tourism</h3>
+                    </div>
+                    <p>
+                        ค้นพบความงามและวัฒนธรรมของประเทศไทย
+                        <br>
+                        Discover the beauty and culture of Thailand
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>สถานที่ท่องเที่ยว</h4>
+                    <ul>
+                        <li><a href="#">กรุงเทพฯ</a></li>
+                        <li><a href="#">เชียงใหม่</a></li>
+                        <li><a href="#">ภูเก็ต</a></li>
+                        <li><a href="#">กระบี่</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>ข้อมูลเพิ่มเติม</h4>
+                    <ul>
+                        <li><a href="#">การเดินทาง</a></li>
+                        <li><a href="#">ที่พัก</a></li>
+                        <li><a href="#">อาหารไทย</a></li>
+                        <li><a href="#">เทศกาล</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>ติดต่อเรา</h4>
+                    <div class="contact-info">
+                        <p>📧 info@thailandtourism.com</p>
+                        <p>📱 +66 2 XXX XXXX</p>
+                        <div class="social-links">
+                            <a href="#">Facebook</a>
+                            <a href="#">Instagram</a>
+                            <a href="#">Twitter</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Thailand Tourism. สงวนสิทธิ์ทุกประการ | All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
